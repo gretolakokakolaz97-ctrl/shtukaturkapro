@@ -968,5 +968,125 @@ background-position: center;
 }
 </style>
 
+
+<style>
+/* FINAL MOBILE FIX */
+@media (max-width: 768px) {
+    html {
+        width: 100%;
+        min-width: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    .hero,
+    .advantages,
+    .materials,
+    .works,
+    .process,
+    .prices,
+    .contacts {
+        width: 100%;
+        max-width: none;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .hero {
+        min-height: 100svh;
+        padding: 145px 20px 55px;
+        box-sizing: border-box;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .header {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 18px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .header nav {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        gap: 7px 18px;
+        align-items: center;
+    }
+
+    .header nav a {
+        font-size: 14px;
+        line-height: 1.25;
+        white-space: normal;
+    }
+
+    .header nav a:not(:last-child)::after {
+        display: none;
+    }
+
+    .button {
+        display: block;
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+        padding: 16px 18px;
+        font-size: 18px;
+    }
+
+    .advantages-grid,
+    .materials-grid,
+    .works-grid,
+    .process-grid,
+    .prices-grid,
+    .contacts-box {
+        width: 100%;
+        max-width: 100%;
+        grid-template-columns: 1fr;
+        box-sizing: border-box;
+    }
+
+    .work-card {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 3;
+    }
+}
+
+@media (max-width: 430px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .header nav {
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+    }
+
+    .header nav a {
+        font-size: 14px;
+    }
+}
+</style>
+
 </body>
 </html>
