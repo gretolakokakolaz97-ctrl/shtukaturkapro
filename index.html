@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="ukr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Механізована штукатурка квартир</title>
+    <style>
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #ff6b00;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #e55f00;
+}
+.contact-item {
+    color: white;
+    text-decoration: none;
+}
+.contact-item:hover {
+    transform: translateY(-5px);
+}
+.contacts {
+    padding: 90px 8%;
+    background: #111;
+    text-align: center;
+}
+
+.contacts h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.contacts-intro {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    color: #bbb;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.contacts-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto 45px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    background: #1b1b1b;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.contact-item span {
+    font-size: 35px;
+    margin-right: 18px;
+}
+
+.contact-item h3 {
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+.contact-item p {
+    color: #bbb;
+    margin: 0;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 16px 35px;
+    background: #f5a623;
+    color: #111;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.contact-button:hover {
+    background: white;
+}
+
+@media (max-width: 700px) {
+    .contacts {
+        padding: 60px 20px;
+    }
+
+    .contacts h2 {
+        font-size: 30px;
+    }
+
+    .contacts-box {
+        grid-template-columns: 1fr;
+    }
+}
+.prices {
+    padding: 80px 8%;
+    background: #181818;
+    text-align: center;
+}
+
+.prices h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.prices-intro {
+    max-width: 750px;
+    margin: 0 auto 50px;
+    color: #bbb;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.prices-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.price-card {
+    background: #1b1b1b;
+    padding: 40px 30px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.price-card:hover {
+    transform: translateY(-8px);
+}
+
+.price-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.price-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.price-card p {
+    color: #bbb;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.price-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #f5a623;
+    color: #111;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.price-button:hover {
+    background: white;
+}
+
+@media (max-width: 700px) {
+    .prices {
+        padding: 60px 20px;
+    }
+
+    .prices h2 {
+        font-size: 30px;
+    }
+
+    .prices-grid {
+        grid-template-columns: 1fr;
+    }
+}
+        .process {
+    padding: 80px 8%;
+    background: #111;
+    text-align: center;
+}
+.process h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.process-intro {
+    color: #bbb;
+    font-size: 20px;
+    margin-bottom: 55px;
+}
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.process-step {
+    position: relative;
+    background: #1b1b1b;
+    padding: 35px 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+.process-step:hover {
+    transform: translateY(-8px);
+}
+
+.process-number {
+    font-size: 28px;
+    font-weight: bold;
+    color: #f5a623;
+    margin-bottom: 20px;
+}
+
+.process-step h3 {
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+.process-step p {
+    color: #bbb;
+    line-height: 1.5;
+}
+@media (max-width: 900px) {
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 700px) {
+    .process {
+        padding: 60px 20px;
+    }
+
+    .process h2 {
+        font-size: 30px;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.works {
+    padding: 80px 8%;
+    background: #181818;
+    text-align: center;
+}
+.works h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.works-intro {
+    color: #bbb;
+    font-size: 20px;
+    margin-bottom: 45px;
+}
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.work-card {
+    height: 320px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+.work-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+}
+.work-card:hover img {
+    transform: scale(1.06);
+}
+@media (max-width: 700px) {
+    .works {
+        padding: 60px 20px;
+    }
+
+    .works h2 {
+        font-size: 30px;
+    }
+
+    .works-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+        .materials {
+    padding: 80px 8%;
+    text-align: center;
+    background: #111;
+}
+.materials h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.materials-intro {
+    max-width: 750px;
+    margin: 0 auto 45px;
+    font-size: 20px;
+    color: #bbb;
+    line-height: 1.6;
+}
+.materials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto 45px;
+}
+.material-card {
+    background: #1b1b1b;
+    padding: 35px 25px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+.material-card:hover {
+    transform: translateY(-8px);
+}
+.material-icon {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+.material-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+.material-card p {
+    color: #bbb;
+    line-height: 1.6;
+}
+.materials .button {
+    display: inline-block;
+}
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: white;
+        }
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 60px 8%;
+            background:
+    linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.85) 0%,
+        rgba(0, 0, 0, 0.55) 50%,
+        rgba(0, 0, 0, 0.25) 100%
+
+    ),
+    url("plaster.jpg");
+background-size: cover;
+background-position: center;
+        }
+        .hero-content {
+            max-width: 700px;
+        }
+        .hero h1 {
+            font-size: 60px;
+            line-height: 1.05;
+            margin-bottom: 25px;
+        }
+        .hero p {
+            font-size: 24px;
+            color: #ccc;
+            margin-bottom: 35px;
+        }
+        .button {
+            display: inline-block;
+            background: #f5a623;
+            color: #111;
+            padding: 18px 35px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .button:hover {
+            background: #ffc15c;
+        }
+        @media (max-width: 700px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+            .hero p {
+                font-size: 20px;
+            }
+            .header {
+                padding: 20px;
+            }
+            .logo {
+                font-size: 18px;
+            }
+            .header nav {
+                gap: 12px;
+            }
+            .header nav a {
+                font-size: 13px;
+                    }
+                    }
+    .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    z-index: 10;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+.header nav {
+    display: flex;
+    gap: 30px;
+}
+.header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 21px;
+    font-weight: 500;
+}
+.header nav a:not(:last-child)::after {
+    content: "|";
+    margin-left: 25px;
+    color: #f5a623;
+}
+.header nav a:hover {
+    color: #f5a623;
+    }
+    .advantages {
+    background: #111;
+    padding: 80px 8%;
+    text-align: center;
+}
+.advantages h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+.advantage {
+    background: #1b1b1b;
+    padding: 35px 25px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+.advantage:hover {
+    transform: translateY(-8px);
+}
+.advantage-icon {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+.advantage h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+.advantage p {
+    color: #bbb;
+    line-height: 1.6;
+}
+@media (max-width: 700px) {
+                .advantages {
+                    padding: 60px 20px;
+                }
+                .advantages h2 {
+                    font-size: 30px;
+                }
+                .advantages-grid {
+                    grid-template-columns: 1fr;
+                }
+                
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+    <div class="logo">ШТУКАТУРКА PRO</div>
+    <nav>
+        <a href="#works">Наші роботи</a>
+        <a href="#prices">Ціни</a>
+        <a href="#process">Як працюємо</a>
+        <a href="#contacts">Контакти</a>
+    </nav>
+</header> 
+    <section class="hero">
+        <div class="hero-content">
+            <h1>
+                Машинна 
+                штукатурка квартир
+            </h1>
+            <p>
+                Рівні стіни швидко та якісно. 
+                Працюємо під ключ.
+            </p>
+            <a href="#contacts" class="button">
+                Розрахувати вартість
+            </a>
+        </div>
+    </section>
+    <section class="advantages">
+    <h2>Чому вибирають нас</h2>
+
+    <div class="advantages-grid">
+
+        <div class="advantage">
+            <div class="advantage-icon">⚡</div>
+            <h3>Швидко</h3>
+            <p>Механізована штукатурка дозволяє виконати великі обсяги робіт у короткий термін.</p>
+        </div>
+
+        <div class="advantage">
+            <div class="advantage-icon">📐</div>
+            <h3>Рівні стіни</h3>
+            <p>Добиваємось рівної поверхні, готової до подальшої обробки.</p>
+        </div>
+
+        <div class="advantage">
+            <div class="advantage-icon">💰</div>
+            <h3>Чесна ціна</h3>
+            <p>Розраховуємо вартість робіт наперед, без несподіваних доплат.</p>
+        </div>
+
+        <div class="advantage">
+            <div class="advantage-icon">🛠️</div>
+            <h3>Під ключ</h3>
+            <p>Організуємо весь процес - від підготовки стін до здачі готової роботи.</p>
+        </div>
+
+    </div>
+</section>
+<section class="materials">
+    <h2>Матеріали за вигідною ціною</h2>
+
+    <p class="materials-intro">
+        Ми співпрацюємо з постачальниками штукатурних матеріалів
+        та отримуємо спеціальні ціни на штукатурку.
+    </p>
+
+    <div class="materials-grid">
+
+        <div class="material-card">
+            <div class="material-icon">📦</div>
+            <h3>Штукатурка в мішках</h3>
+            <p>
+                Можемо організувати закупівлю необхідної кількості
+                матеріалу для вашого об'єкта.
+            </p>
+        </div>
+
+        <div class="material-card">
+            <div class="material-icon">💵</div>
+            <h3>Вигідна ціна</h3>
+            <p>
+                Завдяки співпраці з постачальниками отримуємо
+                спеціальні ціни на матеріали.
+            </p>
+        </div>
+
+        <div class="material-card">
+            <div class="material-icon">🚚</div>
+            <h3>Все для вашого об'єкта</h3>
+            <p>
+                Вам не потрібно самостійно шукати та купувати
+                штукатурку — ми допоможемо організувати матеріали.
+            </p>
+        </div>
+
+    </div>
+
+    <a href="#contacts" class="button">
+        Дізнатися ціну на матеріали
+    </a>
+</section>
+<section class="works" id="works">
+    <h2>Наші роботи:</h2>
+
+    <p class="works-intro">
+        Приклади механізованої штукатурки та готових поверхонь.
+    </p>
+
+    <div class="works-grid">
+
+        <div class="work-card">
+            <img src="1.jpg" alt="Механізована штукатурка">
+        </div>
+        <div class="work-card">
+            <img src="2.jpg" alt="Штукатурка стін">
+        </div>
+        <div class="work-card">
+            <img src="4.jpg" alt="Механізована штукатурка">
+        </div>
+        <div class="work-card">
+            <img src="3.jpg" alt="Рівні стіни">
+        </div>div>
+    </div>
+</section>
+
+
+<section class="process" id="process">
+    <h2>Як ми працюємо?</h2>
+
+    <p class="process-intro">
+        Простий та зрозумілий процес від першого звернення до готових стін.
+    </p>
+
+    <div class="process-grid">
+
+        <div class="process-step">
+            <div class="process-number">01</div>
+            <h3>Заявка</h3>
+            <p>Зв'язуєтесь з нами та розповідаєте про ваш об'єкт.</p>
+        </div>
+
+        <div class="process-step">
+            <div class="process-number">02</div>
+            <h3>Замір</h3>
+            <p>Узгоджуємо деталі та визначаємо необхідний обсяг робіт.</p>
+        </div>
+
+        <div class="process-step">
+            <div class="process-number">03</div>
+            <h3>Підготовка</h3>
+            <p>Готуємо приміщення та поверхні до нанесення штукатурки.</p>
+        </div>
+
+        <div class="process-step">
+            <div class="process-number">04</div>
+            <h3>Штукатурка</h3>
+            <p>Виконуємо механізовану штукатурку швидко та якісно.</p>
+        </div>
+
+        <div class="process-step">
+            <div class="process-number">05</div>
+            <h3>Готові стіни</h3>
+            <p>Приймаємо роботу та залишаємо приміщення чистим.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="prices" id="prices">
+    <h2>Ціни</h2>
+
+    <p class="prices-intro">
+        Вартість залежить від площі, стану стін та обсягу робіт.
+        Розрахуємо точну ціну для вашого об'єкта.
+    </p>
+
+    <div class="prices-grid">
+
+        <div class="price-card">
+            <div class="price-icon">🏢</div>
+            <h3>Квартира</h3>
+            <p>Механізована штукатурка стін у квартирах.</p>
+            <a href="#contacts" class="price-button">
+                Розрахувати вартість
+            </a>
+        </div>
+
+        <div class="price-card">
+            <div class="price-icon">🏠</div>
+            <h3>Будинок</h3>
+            <p>Штукатурка приватних будинків та великих об'єктів.</p>
+            <a href="#contacts" class="price-button">
+                Розрахувати вартість
+            </a>
+        </div>
+
+        <div class="price-card">
+            <div class="price-icon">📐</div>
+            <h3>Індивідуальний розрахунок</h3>
+            <p>Підберемо оптимальне рішення саме для вашого об'єкта.</p>
+            <a href="#contacts" class="price-button">
+                Дізнатися ціну
+            </a>
+        </div>
+
+    </div>
+</section>
+<section class="contacts" id="contacts">
+    <h2>Замовити розрахунок</h2>
+
+    <p class="contacts-intro">
+        Залиште заявку — ми зв'яжемося з вами та розрахуємо
+        вартість штукатурки для вашого об'єкта.
+    </p>
+
+    <div class="contacts-box">
+
+    <a href="tel:+380000000000" class="contact-item">
+        <span>📱</span>
+        <div>
+            <h3>Телефон</h3>
+            <p>+380 XX XXX XX XX</p>
+        </div>
+    </a>
+
+    <a href="https://t.me/anwah9" class="contact-item" target="_blank">
+        <span>💬</span>
+        <div>
+            <h3>Telegram</h3>
+            <p>@anwah9</p>
+        </div>
+    </a>
+
+    <div class="contact-item">
+        <span>📍</span>
+        <div>
+            <h3>Працюємо</h3>
+            <p>Дніпро та Дніпропетровська область</p>
+        </div>
+    </div>
+
+</div>
+
+   <button class="btn" onclick="window.location.href='https://t.me/anwah9';">
+    Отримати розрахунок
+</button>
+
+</section>
+<style>
+@media (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    h1 {
+        font-size: 36px;
+        line-height: 1.15;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .contact-item {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    button.btn {
+        width: 100%;
+        padding: 16px;
+        font-size: 17px;
+    }
+
+}
+</style>
+</body>
+</html>
